@@ -1,0 +1,19 @@
+<div class="product-view">
+    <div class="left">
+        <div class="left-product" *ngFor="let img of images">
+            <img [src]="img" alt="">
+        </div>
+    </div>
+    <div class="right">
+        <h1>Brand name</h1>
+        <h1>{{productData?.name}}</h1>
+        <p>ratings</p>
+        <hr />
+        <p>price</p>
+
+        <p>inclusive of all taxes</p>
+        <h1>SELECT SIZE</h1>
+        <button type="button">Add to Cart</button>
+        <button type="button">Wishlist</button>
+    </div>
+</div>

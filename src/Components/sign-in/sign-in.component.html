@@ -1,0 +1,40 @@
+<div class="login">
+    <div class="login-container">
+        <h1>Login or SignUp</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+            <div class="login-fields">
+                <div *ngIf="!authKey">
+                    <label for="name">Name</label>
+                    <input id="name" formControlName="name" type="text" placeholder="name">
+                    <div *ngIf="signUpForm.get('name')?.touched && signUpForm.get('name')?.invalid"
+                        class="error-message">
+                        <small>Name is required.</small>
+                    </div>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" class="email" placeholder="Enter Email">
+                    <div *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid"
+                        class="error-message">
+                        <small>Email is required.</small>
+                    </div>
+                </div>                
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="password" placeholder="password">
+                    <div *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid"
+                        class="error-message">
+                        <small>Password is required.</small>
+                    </div>
+                </div>
+            </div>
+            <button class="login-btn" type="submit">Continue</button>
+            <p class="have-accunt">Already have an account? <span>Login here</span></p>
+            <div class="agree">
+                <input type="checkbox" formControlName="agree" id="">
+                <p>By continuing, I agree to the <span>Terms of use</span> & <span>Privacy Policy</span></p>
+            </div>
+
+        </form>
+    </div>
+</div>

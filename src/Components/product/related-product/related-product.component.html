@@ -1,0 +1,11 @@
+<div class="popular">
+    <h1>Related products</h1>
+    <hr/>
+    <div *ngFor="let product of data_product" class="popular-item">
+      <img [src]="product.images[0]" alt="{{ product.name }}">
+      <p>{{ product.name }}</p>
+      <p>New Price: ${{ product.new_price }}</p>
+      <p>Old Price: <span class="old-price">${{ product.old_price }}</span></p>
+    </div>
+  </div>
+  

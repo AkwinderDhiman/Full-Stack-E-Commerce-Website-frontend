@@ -1,0 +1,71 @@
+.product-view {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left {
+    width: 60%;
+    // flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    /* Ensure the container is positioned */
+}
+
+.left-product {
+    width: calc(50% - 10px);
+    /* Adjust width to fit two images per row with gap */
+    margin-bottom: 10px;
+    overflow: hidden;
+    /* Hide overflow of the image */
+    position: relative;
+    /* Ensure each image container is positioned */
+}
+
+.left-product img {
+    width: 100%;
+    height: auto;
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    /* Ensure image is above other content */
+}
+
+.left-product:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    position: absolute;
+    /* Remove from document flow */
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* Ensure it is above other elements */
+}
+
+.left-product .old-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.right {
+    width: 40%;
+    // flex: 1;
+    padding-left: 20px;
+}
+
+.right h1,
+.right p {
+    margin: 10px 0;
+}
+
+.right button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

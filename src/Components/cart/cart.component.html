@@ -1,0 +1,17 @@
+<div class="cart">
+    <div class="no-data" *ngIf="items.length === 0">
+        <img src="../../assets/Assets/empty-bag.webp" alt="">
+        <div class="cart-content">
+            <h1>Hey, it feels so light!</h1>
+            <p>There is nothing in your bag. Let's add some items.</p>
+        </div>
+    </div>
+    <div *ngIf="items.length > 0">
+        <div *ngFor="let item of items" class="cart-item">
+            <h3>name</h3>
+            <p>Price: price</p>
+            <p>Quantity: quantity</p>
+        </div>
+        <button (click)="clearCart()">Clear Cart</button>
+    </div>
+</div>      

@@ -1,0 +1,20 @@
+<div class="">
+    <img [src]="imageSrc" alt="banner" class="shop-banner">
+    <div class="shop-index">
+        <p>
+            <span>Showing 1-12</span> out of 36 products
+        </p>
+        <div class="shop-sort">
+            Sort by <img src="../../assets/Assets/dropdown_icon.png" alt="">
+        </div>
+    </div>
+    <div class="shop-category">
+        <div *ngFor="let product of filteredProducts" class="shop-products">
+            <img [src]="product.image" alt="{{ product.name }}"  (click)="viewProductDetail(product)">
+            <p>{{ product.name }}</p>
+            <p>New Price: ${{ product.new_price }}</p>
+            <p>Old Price: <span class="old-price">${{ product.old_price }}</span></p>
+        </div>
+    </div>
+    <div class="loadmore">Explore more</div>
+</div>

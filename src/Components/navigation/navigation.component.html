@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <img src="../../assets/Assets/logo.png" alt="logo">
+    SHOPPER
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Shop</a></li>
+    <li><a routerLink="/mens" routerLinkActive="active">Men</a></li>
+    <li><a routerLink="/womens" routerLinkActive="active">Women</a></li>
+    <li><a routerLink="/kids" routerLinkActive="active">Kids</a></li>
+
+    <!-- <li><a routerLink="/product" routerLinkActive="active">Kids</a></li> -->
+  </ul>
+  <div class="navbar-actions">
+    <div class="example-button-row" *ngIf="authKey">
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+
+    </div>
+    <div class="example-button-row"  *ngIf="!authKey">
+      <a routerLink="/login" routerLinkActive="active"> <button mat-stroked-button>Login</button></a>
+
+    </div>
+    <a routerLink="/cart">
+      <img src="../../assets/Assets/cart_icon.png" alt="cart">
+    </a>
+  </div>
+  <div class="navbar-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+<div class="content">
+  <!-- Your main content goes here -->
+</div>
